@@ -40,19 +40,30 @@ namespace PagoEfectivo_Back
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            app.UseCors(options =>
-            {
-                options.WithOrigins("http://localhost:4200");
-                options.AllowAnyMethod();
-                options.AllowAnyHeader();
-            });
+           
 
 
             if (env.IsDevelopment())
             {
+                app.UseCors(options =>
+                {
+                    options.WithOrigins("http://localhost:4200");
+                    options.AllowAnyMethod();
+                    options.AllowAnyHeader();
+                });
+
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PagoEfectivo_Back v1"));
+            }
+            else
+            {
+                app.UseCors(options =>
+                {
+                    options.WithOrigins("https://pagoefectivo.azurewebsites.net");
+                    options.AllowAnyMethod();
+                    options.AllowAnyHeader();
+                });
             }
 
             app.UseHttpsRedirection();
