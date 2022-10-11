@@ -10,4 +10,7 @@
 8. Con la interfaz gráfica de Docker Desktop darle "Run" a la imagen creada.
 9. Expandir a Optional Settings y Digitar en Ports LocalHost : 4200.
 10. Darle a Run.
-11. La aplicación inicio, y cuenta con los módulos : generación de códigos, canje de códigos y listado de email y codigos registrados.
+11. La aplicación inicio, y cuenta con los módulos : 
+- Generación de códigos
+- Canje de códigos 
+- Listado de email y codigos registrados.
