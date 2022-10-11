@@ -1,4 +1,4 @@
-# PagoEfectivo_Back
+# GeneradorCodigos.Back
 1. Correr el Backend en Visual Studio, se habilitó la compatibilidad con Docker.
 2. Compilar con Docker desde la Interfaz Visual Studio.
 3. Al Crearse la imagen Docker Verificar en que puerto se encuentra
